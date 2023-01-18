@@ -1,0 +1,142 @@
+/*********************
+        FONTS
+**********************/
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&family=Lora:ital,wght@0,500;1,400&family=Megrim&family=Merriweather&family=Righteous&family=Style+Script&display=swap");
+
+/*********************
+        ICONS
+**********************/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
+@import url("https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0");
+
+
+:root {
+    --nav-height: 4rem;
+
+    /*****************************************
+                   SPACING
+    *****************************************/
+    --gap-tiny: .75rem;
+    --gap-small: 1rem;
+    --gap-normal: 1.5rem;
+    --gap-big: 2rem;
+    --gap-max: 3rem;
+
+    /*****************************************
+                    COLORS
+    *****************************************/
+    --pri-color: hsl(46, 65%, 65%);
+    --title-color: hsl(46, 4%, 16%);
+    --text-color: hsl(46, 4%, 28%);
+    --text-color-light: hsl(46, 4%, 44%);
+    --body-color: hsl(46, 4%, 99%);
+    --container-color: hsl(46, 4%, 95%);
+
+    --gradient-color: linear-gradient(45deg, var(--text-color) var(--pri-color));
+
+
+    /****************************************
+                    SHADOW
+    *****************************************/
+    --box-shadow: 0 5px 20px hsla(46, 24%, 35%, 0.5);
+    --text-shadow: 0 0 0.25rem hsla(46, 24%, 35%, 0.5);
+
+    /****************************************
+             FONTS AND TYPOGRAPHY
+    *****************************************/
+
+    /*============ Font Family ===========*/
+    --ff-body: "Merriweather", sans-serif;
+    --ff-title: "Lora", serif;
+    --ff-logo: "Righteous", cursive;
+
+    /*============ Font Weight ===========*/
+    --fw-medium: 500;
+    --fw-semibold: 600;
+
+    /*============ Font Size ============*/
+    --fsz-max: 3rem;
+    --fsz-h1: 2.25rem;
+    --fsz-h2: 2rem;
+    --fsz-h3: 1.75rem;
+    --fsz-h4: 1.5rem;
+    --fsz-h5: 1.25rem;
+    --fsz-h6: 1rem;
+    --fsz-normal: 0.938rem;
+    --fsz-small: 0.813rem;
+    --fsz-smaller: 0.75rem;
+    --fsz-tiny: 0.625rem;
+
+    /*============= Z-index =============*/
+    --z-normal: 1;
+    --z-tooltip: 100;
+    --z-topmost: 1000;
+
+    /*====== Responsive Font Size ======*/
+    @media screen and (min-width: 1024px) {
+        --fsz-max: 3rem;
+        --fsz-h1: 2.5rem;
+        --fsz-h2: 2.25rem;
+        --fsz-h3: 2rem;
+        --fsz-h4: 1.75rem;
+        --fsz-h5: 1.5rem;
+        --fsz-h6: 125rem;
+        --fsz-normal: 1rem;
+        --fsz-small: 0.875rem;
+        --fsz-smaller: 0.813rem;
+        --fsz-tiny: 0.688rem;
+    }
+}
+
+.dark {
+    --title-color: hsl(46, 4%, 95%);
+    --text-color: hsl(46, 4%, 99%);
+    --text-color-light: hsl(46, 4%, 75%);
+    --body-color: hsl(46, 4%, 28%);
+    --container-color: hsl(46, 4%, 16%);
+}
+
+
+/****************************************
+                KEYFRAMES
+*****************************************/
+
+@keyframes float-to-left {
+    50% {
+        transform: translateX(-5px);
+    }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes float-to-right {
+    50% {
+        transform: translateX(5px);
+    }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes tracking-in-expand {
+    /* animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; */
+
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

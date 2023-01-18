@@ -1,0 +1,353 @@
+
+/****************************************
+                    BASE
+*****************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    /* border: orange 1px dashed; */
+
+    transition-duration: 150ms;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-body);
+    font-size: var(--fsz-normal);
+    background-color: var(--body-color);
+    color: var(--text-color);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+/*-------------------- Heading --------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-color);
+    font-family: var(--ff-body);
+    font-weight: var(--fw-semibold);
+}
+
+h1 {
+    font-size: var(--fsz-h1);
+}
+
+h2 {
+    font-size: var(--fsz-h2);
+}
+
+h3 {
+    font-size: var(--fsz-h3);
+}
+
+h4 {
+    font-size: var(--fsz-h4);
+}
+
+h5 {
+    font-size: var(--fsz-h5);
+}
+
+h6 {
+    font-size: var(--fsz-h6);
+}
+
+
+
+/*-------------------- Misc --------------------*/
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: grid;
+}
+
+img {
+    min-width: 100%;
+    height: auto;
+}
+
+a:active,
+button:active {
+    opacity: 0.75;
+    transition: opacity 100ms ease-in;
+}
+
+ul,
+a,
+p,
+label,
+button {
+    font-family: var(--ff-body);
+    color: var(--text-color);
+}
+
+
+/*-------------------- Section --------------------*/
+
+section:first-of-type {
+    margin-top: var(--nav-height);
+}
+
+section {
+    display: grid;
+    min-height: 33vh;
+    padding: 5rem var(--gap-normal);
+}
+
+section>.container {
+    place-self: center;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.paragraph>p {
+    text-align: justify;
+    line-height: 1.5rem;
+}
+
+.paragraph>p:not(:first-child) {
+    text-indent: 2.5rem;
+}
+
+/****************************************
+                   THEME
+*****************************************/
+
+/* Theme button */
+.material-symbols-rounded {
+    cursor: pointer;
+    place-self: center;
+}
+
+.img-round {
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.text-shadow {
+    text-shadow: var(--text-shadow);
+}
+
+.section__head {
+    font-size: var(--fsz-h1);
+}
+
+.section__sub {
+    font-family: "Megrim";
+    font-size: var(--fsz-h4);
+
+    color: var(--text-color-light);
+}
+
+/* Call to Action Button Styling */
+
+.btn-cta {
+    grid-template-columns: max-content max-content;
+
+    position: relative;
+
+    width: max-content;
+    padding: 1.188rem 1.375rem;
+    gap: 0.5rem;
+
+    text-decoration: none;
+    color: var(--text-color);
+
+    transition: all 0.2s ease;
+}
+
+.btn-cta:before {
+    content: "";
+
+    /* Position the background to top left corner */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    /* make the background a circle */
+    border-radius: 1.75rem;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    /* add color gradient to the circle */
+    background: linear-gradient(45deg,
+            hsla(0, 0%, 23%, 0.8),
+            var(--pri-color));
+
+    /* transition all properties with easing using cubic bezier */
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.btn-cta .cta-text {
+    position: relative;
+
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.btn-cta .arrow {
+    place-self: center;
+
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover:before {
+    width: 100%;
+}
+
+.btn-cta:hover .arrow {
+    animation: float-to-right 0.9s infinite;
+}
+
+.btn--minimal {
+    display: inline-block;
+    position: relative;
+
+    padding: 1rem 2rem;
+    width: max-content;
+
+    cursor: pointer;
+
+    background: none;
+    border: var(--text-color) 2px solid;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+
+    user-select: none;
+
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.5s, opacity 0.2s;
+}
+
+.btn--minimal:before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1;
+
+    background: var(--text-color);
+
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.btn--minimal:hover {
+    color: var(--body-color);
+}
+
+.btn--minimal:hover:before {
+    transform: scaleX(1);
+}
+
+/****************************************
+            REUSABLE CSS CLASSES
+*****************************************/
+.container {
+    max-width: 1024px;
+    width: 75vw;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap-normal);
+}
+
+.section, .container {
+    display: grid;
+    place-content: center;
+}
+
+.section__border {
+    border-bottom: 1px solid var(--title-color);
+}
+
+.section__title,
+.section__subtitle {
+    text-align: center;
+}
+
+.section__title {
+    font-size: var(--fsz-h1);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 0.25rem;
+}
+
+.section__subtitle {
+    display: block;
+    font-size: var(--fsz-small);
+    color: var(--text-color-light);
+    margin-bottom: 3rem;
+}
+
+.main {
+    /* For animations */
+    overflow: hidden;
+}
+
+.center-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-container {
+    gap: var(--gap-big);
+    padding: var(--gap-big);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
