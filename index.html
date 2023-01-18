@@ -1,9 +1,322 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <title>YPC Computer Shop Homepage</title>
+
+    <link rel="icon" type="image/png" href="http://example.com/image.png" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- define svg icons for reuse -->
+    <svg style="display: none" version="2.0">
+        <defs>
+            <symbol id="arrow" class="arrow" viewBox="0 0 15 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+            </symbol>
+        </defs>
+        <!-- to make the circle-arrow-left.svg file also usable as image: -->
+        <use href="arrow" />
+    </svg>
+</head>
+
 <body>
+    <!--****************************************
+                       HEADER
+    *****************************************-->
+    <header id="header" class="header">
+        <nav class="nav">
+            <a href="" class="nav__logo">
+                YPC Computer Shop
+            </a>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+            <div id="nav__menu" class="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <span class="material-symbols-rounded"> home </span> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about-us" class="nav__link">
+                            <span class="material-symbols-rounded"> info </span> About Us
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#product" class="nav__link">
+                            <span class="material-symbols-rounded"> storefront </span> Products
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <span class="material-symbols-rounded"> handyman </span> Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#builder-tool" class="nav__link">
+                            <span class="material-symbols-rounded"> computer </span> PC Builder
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact-us" class="nav__link">
+                            <span class="material-symbols-rounded"> headset_mic </span> Contact Us
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#account" class="nav__link">
+                            <span class="material-symbols-rounded"> account_circle </span> Account
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="nav__buttons">
+                <!-- toggle button -->
+                <div id="nav-hamburger" class="nav__hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+        <a class="btn-scroll-top" href="#home">
+            <span class="material-symbols-rounded">
+                arrow_upward
+            </span>
+        </a>
+
+    </header>
+
+    <!--****************************************
+                       MAIN
+    *****************************************-->
+    <main id="home" class="main">
+        <section id="slides" class="slides section center-bg"
+            style="background-image: url('https://images.pexels.com/photos/533424/pexels-photo-533424.jpeg');">
+            <div class="slides__content">
+                <h1 class="slides__heading">Sometimes a tweak is all it takes</h1>
+                <p class="slides__text">Get your computer running like new again with our expert repair services</p>
+                <a href="#contact-us" class="btn-cta dark">
+                    <span class="cta-text">Call Us Now</span>
+
+                    <svg class="arrow" width="15px" height="10px" viewBox="0 0 15 10">
+                        <use href="#arrow" />
+                    </svg>
+                </a>
+            </div>
+            <div class="slides__nav-control">
+                <button class="slides__btn-nav left">
+                    <span class="material-symbols-rounded">
+                        navigate_before
+                    </span>
+                </button>
+                <button class="slides__btn-nav right">
+                    <span class="material-symbols-rounded">
+                        navigate_next
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <section id="about-us" class="section__border">
+            <div class="about__container container grid">
+                <img class="about-us__image img-round box-shadow"
+                    src="https://images.pexels.com/photos/4705635/pexels-photo-4705635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="About YPC Computer Shop">
+                <div class="about__text text-container">
+                    <div>
+                        <h1 class="section__head">About Us</h1>
+                        <h2 class="section__sub">YPC Computer Shop</h2>
+                    </div>
+
+                    <div class="about__para paragraph">
+                        <p>
+                            Welcome to YPC Computer Shop, your one-stop shop for all your computer needs! We are a team
+                            of students who understand the unique challenges and needs of fellow students. Based in YPC
+                            International College in Pandan Perdana, we are committed to providing quick and affordable
+                            services to help you get the most out of your technology.
+                        </p>
+                        <p>
+                            At YPC Computer Shop, we understand that technology problems can be frustrating and
+                            time-consuming. That's why we aim to provide efficient and effective solutions that will get
+                            you back to your studies in no time. Whether you need a computer repair, software
+                            installation, custom PC building, or data recovery, our team of experts is here to help.
+                        </p>
+                        <p>
+                            Don't let technology problems slow you down. Trust the experts at YPC Computer Shop to
+                            provide the solutions you need to stay on top of your game. We are committed to providing
+                            the highest quality service, and we are confident that you will be completely satisfied with
+                            our work. Contact us today to schedule your appointment!
+                        </p>
+                    </div>
+
+                    <a href="#contact-us" class="btn--minimal">CONTACT US</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="services" class="section__border dark">
+
+            <div class="container">
+                <div>
+                    <h1 class="section__head">Our Services</h1>
+                    <h2 class="section__sub">Expert Solutions For All Your Computing Needs</h2>
+                </div>
+
+                <div class="services__grid container">
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            handyman
+                        </span>
+                        <h3 class="service__head">Software Installation</h3>
+                    </div>
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            auto_fix
+                        </span>
+                        <h3 class="service__head">Formatting and Tweaking</h3>
+                    </div>
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            engineering
+                        </span>
+                        <h3 class="service__head">Custom PC Building</h3>
+                    </div>
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            upgrade
+                        </span>
+                        <h3 class="service__head">PC/Laptop Upgrades</h3>
+                    </div>
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            home_repair_service
+                        </span>
+                        <h3 class="service__head">Repair and Maintenance</h3>
+                    </div>
+                    <div class="service__container">
+                        <span class="material-symbols-rounded">
+                            support_agent
+                        </span>
+                        <h3 class="service__head">Online Technical Support</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="builder-tool" class="section__border">
+
+            <div class="container grid">
+                <div class="builder__img-grid">
+                    <img src="https://images.pexels.com/photos/2582935/pexels-photo-2582935.jpeg?auto=compress&cs=tinysrgb"
+                        alt="Motherboard with Cpu Socket">
+
+                    <img class="horizontal"
+                        src="https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb"
+                        alt="Hard Disk">
+
+                    <img class="horizontal"
+                        src="https://images.pexels.com/photos/8622911/pexels-photo-8622911.jpeg?auto=compress&cs=tinysrgb"
+                        alt="Nvidia RTX2080">
+
+                    <img src="https://images.pexels.com/photos/2582928/pexels-photo-2582928.jpeg?auto=compress&cs=tinysrgb"
+                        alt="Kingston HyperX RAM Sticks">
+                </div>
+
+                <div class="builder__head">
+                    <h1 class="section__head">
+                        YOU CHOOSE THE PARTS,
+                        WE BUILD IT FOR YOU!
+                    </h1>
+                    <h2 class="section__sub">
+                        Unleash the full potential of your computer with
+                        our expertly curated parts recommendations
+                    </h2>
+                </div>
+
+                <div class="builder__para paragraph">
+                    <p>
+                        Are you tired of endlessly scrolling through online forums and trying to make sense of the
+                        latest computer hardware trends? Look no further! Our custom PC part recommendation tool
+                        takes the guesswork out of building your dream machine.
+                    </p>
+                    <p>
+                        Say goodbye to sub-par performance and hello to a truly custom-built powerhouse. Try our
+                        tool
+                        today and experience the difference.
+                    </p>
+
+                    <a href="#" class="btn--minimal">Build Your Dream PC</a>
+                </div>
+
+
+
+
+        </section>
+
+        <section id="contact-us">
+
+            <div class="container grid">
+                <div class="contact__head">
+                    <h1 class="section__head">
+                        ENQUIRE US
+                    </h1>
+                    <h2 class="section__sub">
+                        Reach Out To Us
+                    </h2>
+                </div>
+
+                <div class="map-container box-shadow img-round">
+                    <div class="mapouter img-round">
+                        <div class="gmap_canvas img-round">
+                            <iframe width="400" height="600" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=ypc%20inter&t=&z=19&ie=UTF8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form">
+                    <div class="form-item">
+                        <label for="title">Title:</label>
+                        <input type="text"></input>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="description">Description:</label>
+                        <textarea name="" id="" cols="20" rows="10"></textarea>
+                    </div>
+
+                    <button class="btn--minimal">
+                        Whatsapp
+                    </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--****************************************
+                       FOOTER
+    *****************************************-->
+    <footer class="footer dark">
+        Copyright © 2023 Computer Shop. <br>
+        All rights reserved.
+    </footer>
+
+    <!--****************************************
+                     SCROLL UP
+    *****************************************-->
+
+    <!--****************************************
+                     JAVASCRIPT
+    *****************************************-->
+    <script src="navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </body>
+
 </html>
